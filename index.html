@@ -15,22 +15,31 @@
     }
     .navbar {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      background-color: black;
-      padding: 12px;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 20px;
+      background-color: #000;
       border-bottom: 1px solid #00ff00;
     }
-    .navbar a {
+    .nav-item {
+      background-color: #111;
+      border: 1px solid #00ff00;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .nav-item:hover {
+      background-color: #00ff00;
+      color: black;
+    }
+    .nav-item a {
       color: #00ff00;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1em;
     }
-    .navbar a:hover {
-      text-decoration: underline;
+    .nav-item:hover a {
+      color: black;
     }
     .terminal {
       text-align: center;
@@ -53,15 +62,15 @@
 </head>
 <body>
 
-  <!-- 🔰 Responsive Top Nav -->
+  <!-- 🔰 Hacker-style Navigation Blocks -->
   <div class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">🔍 About</a>
-    <a href="#">📞 Contact</a>
-    <a href="#">💼 Projects</a>
+    <div class="nav-item"><a href="index.html">🏠 Home</a></div>
+    <div class="nav-item"><a href="about.html">🔍 About</a></div>
+    <div class="nav-item"><a href="#">📞 Contact</a></div>
+    <div class="nav-item"><a href="#">💼 Projects</a></div>
   </div>
 
-  <!-- ⚙️ Hacker Terminal Text -->
+  <!-- ⚙️ Terminal Section -->
   <div class="terminal">
     <h1><span class="cursor"></span> 💀</h1>
     <p class="green">Discipline With Hustle</p>
