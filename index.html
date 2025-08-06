@@ -5,15 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>💀 DWH Agency</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: black;
+      padding: 15px 10px;
+    }
+    .navbar a {
+      color: #00ff00;
+      margin: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .terminal {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .green { color: #00ff00; }
+    .orange { color: orange; }
+    .white { color: white; }
+    .blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+    .about-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .about-link a {
+      color: #00ff00;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
   <!-- 🔰 Navigation Bar -->
-  <div style="background-color: black; padding: 10px; text-align: center;">
-    <a href="index.html" style="color: #00ff00; margin: 0 15px; font-weight: bold; text-decoration: none;">🏠 Home</a>
-    <a href="about.html" style="color: #00ff00; margin: 0 15px; font-weight: bold; text-decoration: none;">🔍 About</a>
-    <a href="#" style="color: #00ff00; margin: 0 15px; font-weight: bold; text-decoration: none;">📞 Contact</a>
-    <a href="#" style="color: #00ff00; margin: 0 15px; font-weight: bold; text-decoration: none;">💼 Projects</a>
+  <div class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">🔍 About</a>
+    <a href="#">📞 Contact</a>
+    <a href="#">💼 Projects</a>
   </div>
 
   <!-- 💻 Hacker Terminal UI -->
@@ -26,10 +71,8 @@
   </div>
 
   <!-- 🔗 About Page Link -->
-  <div style="text-align:center; margin-top: 20px;">
-    <a href="about.html" style="color: #00ff00; font-weight: bold; text-decoration: none;">
-      🔎 About DWH
-    </a>
+  <div class="about-link">
+    <a href="about.html">🔎 About DWH</a>
   </div>
 
 </body>
