@@ -1,28 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DWH Anon Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DWH Hacker Style</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #000;
+      color: #00FF00;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #0d0d0d;
+      padding: 15px;
+      border-bottom: 2px solid #00FF00;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #00FF00;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00FFFF;
+    }
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      text-shadow: 0 0 10px #00FF00;
+      margin: 50px 0 10px 0;
+    }
+    .status {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .status span {
+      color: #FFD700;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+    .terminal {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #111;
+      border: 2px solid #00FF00;
+      box-shadow: 0 0 15px #00FF00;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">🔍 About</a>
-    <a href="contact.html">📞 Contact</a>
-    <a href="projects.html">💼 Projects</a>
-  </nav>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1><span class="emoji">💀</span> Discipline<br>With Hustle</h1>
-    <p>Initializing<br><span class="orange">hacking environment...</span><br>
-    Status: <span class="green">ONLINE</span><br><br>
-    >>> <span class="orange">Awaiting<br>next<br>command...</span></p>
+  <nav>
+    <a href="#">🏠 Home</a>
+    <a href="#">🔍 About</a>
+    <a href="#">📞 Contact</a>
+    <a href="#">💼 Projects</a>
+  </nav>  <h1>💀 Discipline With Hustle</h1>
+  <div class="status">
+    Initializing <span>hacking environment...</span><br />
+    Status: <span style="color: #00FF00">ONLINE</span><br />
+    >>> <span>Awaiting next command...</span>
+  </div>  <div class="terminal">
+    [INFO] Access granted to DWH mainframe.<br>
+    [DATA] Loading interface... 100% complete.<br>
+    [SYSTEM] Welcome back, Commander DWHxnon.
   </div>
-
 </body>
 </html>
