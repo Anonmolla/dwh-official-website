@@ -1,20 +1,46 @@
-
 body {
-    background-color: black;
-    color: lime;
-    font-family: monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    margin: 0;
+  background-color: black;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
-.container {
-    text-align: center;
-    animation: flicker 1.5s infinite alternate;
+
+.terminal {
+  text-align: center;
 }
-@keyframes flicker {
-    from { opacity: 1; }
-    to { opacity: 0.8; }
+
+.green {
+  color: #00ff00;
+}
+
+.orange {
+  color: orange;
+}
+
+.white {
+  color: white;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+p {
+  margin: 5px 0;
 }
