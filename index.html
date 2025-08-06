@@ -7,53 +7,52 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      margin: 0;
       background-color: black;
       color: #00ff00;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
     }
     .navbar {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
       background-color: black;
       padding: 15px 10px;
+      gap: 25px;
+      border-bottom: 1px solid #00ff00;
     }
     .navbar a {
       color: #00ff00;
-      margin: 10px 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
     }
     .terminal {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 80px;
     }
-    .green { color: #00ff00; }
-    .orange { color: orange; }
-    .white { color: white; }
-    .blink {
-      animation: blink 1s infinite;
+    .cursor::after {
+      content: "|";
+      animation: blink 1s step-start infinite;
     }
     @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0.3; }
-      100% { opacity: 1; }
+      50% { opacity: 0; }
     }
-    .about-link {
-      text-align: center;
-      margin-top: 30px;
+    .green { color: #00ff00; }
+    .orange { color: #ff8800; }
+    .orange.blink {
+      animation: blink 1s infinite;
     }
-    .about-link a {
-      color: #00ff00;
-      font-weight: bold;
-      text-decoration: none;
-    }
+    .white { color: #fff; }
   </style>
 </head>
 <body>
 
-  <!-- 🔰 Navigation Bar -->
+  <!-- 🔰 Top Navigation Bar -->
   <div class="navbar">
     <a href="index.html">🏠 Home</a>
     <a href="about.html">🔍 About</a>
@@ -61,18 +60,13 @@
     <a href="#">💼 Projects</a>
   </div>
 
-  <!-- 💻 Hacker Terminal UI -->
+  <!-- ⚙️ Hacker Terminal UI -->
   <div class="terminal">
-    <h1><span class="cursor"></span>💀</h1>
+    <h1><span class="cursor"></span> 💀</h1>
     <p class="green">Discipline With Hustle</p>
     <p class="orange">Initializing hacking environment...</p>
     <p class="white">Status: <span class="green">ONLINE</span></p>
     <p class="orange blink">>>> Awaiting next command...</p>
-  </div>
-
-  <!-- 🔗 About Page Link -->
-  <div class="about-link">
-    <a href="about.html">🔎 About DWH</a>
   </div>
 
 </body>
