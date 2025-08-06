@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,37 +12,38 @@
       margin: 0;
       padding: 0;
     }
-    .navbar {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-      padding: 20px;
-      background-color: #000;
-      border-bottom: 1px solid #00ff00;
+    .navbar-toggle {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1001;
     }
-    .nav-item {
+    .navbar-menu {
+      position: absolute;
+      top: 50px;
+      left: 15px;
       background-color: #111;
       border: 1px solid #00ff00;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: 0.3s;
+      padding: 10px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: 5px;
+      z-index: 1000;
     }
-    .nav-item:hover {
-      background-color: #00ff00;
-      color: black;
-    }
-    .nav-item a {
+    .navbar-menu a {
       color: #00ff00;
       text-decoration: none;
       font-weight: bold;
     }
-    .nav-item:hover a {
-      color: black;
+    .navbar-menu a:hover {
+      text-decoration: underline;
     }
     .terminal {
       text-align: center;
-      margin-top: 80px;
+      margin-top: 100px;
     }
     .cursor::after {
       content: "|";
@@ -59,25 +59,23 @@
     }
     .white { color: #fff; }
   </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navbar-menu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
 </head>
-<body>
-
-  <!-- 🔰 Hacker-style Navigation Blocks -->
-  <div class="navbar">
-    <div class="nav-item"><a href="index.html">🏠 Home</a></div>
-    <div class="nav-item"><a href="about.html">🔍 About</a></div>
-    <div class="nav-item"><a href="#">📞 Contact</a></div>
-    <div class="nav-item"><a href="#">💼 Projects</a></div>
-  </div>
-
-  <!-- ⚙️ Terminal Section -->
-  <div class="terminal">
+<body>  <!-- ☰ Hamburger Icon -->  <div class="navbar-toggle" onclick="toggleMenu()">☰</div>  <!-- 🔰 Hidden Navbar Menu -->  <div id="navbar-menu" class="navbar-menu">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">🔍 About</a>
+    <a href="#">📞 Contact</a>
+    <a href="#">💼 Projects</a>
+  </div>  <!-- ⚙️ Terminal Section -->  <div class="terminal">
     <h1><span class="cursor"></span> 💀</h1>
     <p class="green">Discipline With Hustle</p>
     <p class="orange">Initializing hacking environment...</p>
     <p class="white">Status: <span class="green">ONLINE</span></p>
     <p class="orange blink">>>> Awaiting next command...</p>
-  </div>
-
-</body>
+  </div></body>
 </html>
