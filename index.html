@@ -1,87 +1,71 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DWH Hacker Style</title>
-  <link rel="stylesheet" href="style.css" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DWH Anon - Hacker Vibe</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      background-color: #000;
-      color: #00FF00;
-      font-family: 'Courier New', Courier, monospace;
-      padding: 20px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background-color: #0d0d0d;
-      padding: 15px;
-      border-bottom: 2px solid #00FF00;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: #00FF00;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #00FFFF;
-    }
-    h1 {
-      text-align: center;
-      font-size: 48px;
-      text-shadow: 0 0 10px #00FF00;
-      margin: 50px 0 10px 0;
-    }
-    .status {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 18px;
-    }
-    .status span {
-      color: #FFD700;
-      animation: blink 1.5s infinite;
-    }
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0.2; }
-      100% { opacity: 1; }
-    }
-    .terminal {
-      margin-top: 50px;
-      padding: 20px;
-      background-color: #111;
-      border: 2px solid #00FF00;
-      box-shadow: 0 0 15px #00FF00;
-      font-size: 16px;
-      line-height: 1.6;
-    }
+      margin: 0;
+      font-family: monospace;
+      background-color: #000000;
+      color: #00ff00;
+      overflow-x: hidden;
+    }.navbar {
+  background-color: #0a0a0a;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #00ff00;
+}
+
+.navbar a {
+  color: #00ff00;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.terminal {
+  padding: 40px;
+  font-size: 18px;
+  animation: blink 0.9s infinite;
+  white-space: pre-wrap;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.rainbow {
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 4s linear infinite;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% }
+  100% { background-position: 100% }
+}
+
   </style>
-</head>
-<body>
-  <nav>
-    <a href="#">🏠 Home</a>
-    <a href="#">🔍 About</a>
-    <a href="#">📞 Contact</a>
-    <a href="#">💼 Projects</a>
-  </nav>  <h1>💀 Discipline With Hustle</h1>
-  <div class="status">
-    Initializing <span>hacking environment...</span><br />
-    Status: <span style="color: #00FF00">ONLINE</span><br />
-    >>> <span>Awaiting next command...</span>
+</head><body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
   </div>  <div class="terminal">
-    [INFO] Access granted to DWH mainframe.<br>
-    [DATA] Loading interface... 100% complete.<br>
-    [SYSTEM] Welcome back, Commander DWHxnon.
+    <div class="rainbow">Welcome to DWH Anon Network</div>
+    <br>
+    Initiating secure session...
+    <br>
+    Accessing mainframe...
+    <br>
+    <span style="color: red;">[Status: 🔒 LOCKED]</span>
+    <br><br>
+    <span style="color: #00ff00">Coming Soon...</span>
   </div>
-</body>
-</html>
+</body></html>
