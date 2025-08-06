@@ -1,41 +1,52 @@
+/* Rainbow Line Animation */
+.rainbow-border {
+  border-top: 2px solid;
+  border-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet) 1;
+  animation: rainbowMove 3s linear infinite;
+  margin: 4px 0;
+}
+
+/* Rainbow Moving Keyframes */
+@keyframes rainbowMove {
+  0% { border-image-slice: 1; border-image-source: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet); }
+  100% { border-image-slice: 1; border-image-source: linear-gradient(to right, violet, blue, cyan, green, yellow, orange, red); }
+}
+
 /* Navbar Styling */
 .navbar {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-  border-bottom: 1px solid #0f0;
-  background-color: #000;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 10px 0;
+  font-family: monospace;
+  font-size: 16px;
 }
 
 .navbar a {
-  color: #0f0;
+  color: lime;
   text-decoration: none;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
-  transition: 0.3s;
+  margin: 0 15px;
+  padding: 8px 12px;
+  position: relative;
+  transition: all 0.3s;
+  border: 1px solid transparent;
 }
 
 .navbar a:hover {
-  color: #fff;
-  text-shadow: 0 0 5px #0f0;
+  border: 1px solid lime;
+  background-color: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 10px lime;
 }
 
-/* Hero section */
-.hero {
-  text-align: center;
-  margin-top: 80px;
-}
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
 
-.green {
-  color: #0f0;
-}
-
-.orange {
-  color: #f90;
-}
-
-.emoji {
-  font-size: 32px;
+  .navbar a {
+    margin: 8px 0;
+  }
 }
