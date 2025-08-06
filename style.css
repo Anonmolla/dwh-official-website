@@ -1,37 +1,36 @@
-/* Rainbow Line Animation */
-.rainbow-border {
-  border-top: 2px solid;
-  border-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet) 1;
-  animation: rainbowMove 3s linear infinite;
-  margin: 4px 0;
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: 'Courier New', monospace;
+  color: #0f0;
 }
 
-/* Rainbow Moving Keyframes */
-@keyframes rainbowMove {
-  0% { border-image-slice: 1; border-image-source: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet); }
-  100% { border-image-slice: 1; border-image-source: linear-gradient(to right, violet, blue, cyan, green, yellow, orange, red); }
-}
-
-/* Navbar Styling */
+/* Rainbow Navbar */
 .navbar {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  flex-wrap: wrap;
+  background-color: #000;
   padding: 10px 0;
-  font-family: monospace;
   font-size: 16px;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet) 1;
+  border-image-slice: 1;
+  animation: rainbowMove 5s linear infinite;
 }
 
 .navbar a {
   color: lime;
   text-decoration: none;
-  margin: 0 15px;
-  padding: 8px 12px;
-  position: relative;
+  margin: 10px 20px;
+  padding: 5px 10px;
   transition: all 0.3s;
+  position: relative;
   border: 1px solid transparent;
+  border-radius: 6px;
 }
 
 .navbar a:hover {
@@ -40,13 +39,51 @@
   box-shadow: 0 0 10px lime;
 }
 
-/* Responsive Layout */
+/* Rainbow Animation */
+@keyframes rainbowMove {
+  0% { border-image-source: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet); }
+  100% { border-image-source: linear-gradient(to right, violet, blue, cyan, green, yellow, orange, red); }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.glow {
+  color: lime;
+  text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
+}
+
+.green-text {
+  color: #00ff00;
+}
+
+.red-text {
+  color: #ff4444;
+}
+
+/* Future Box */
+.box {
+  border: 2px solid lime;
+  margin: 40px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  color: white;
+  background-color: #111;
+  text-align: center;
+  box-shadow: 0 0 20px #0f0;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
+    padding: 10px;
   }
-
   .navbar a {
-    margin: 8px 0;
+    margin: 5px 0;
   }
 }
