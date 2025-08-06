@@ -1,95 +1,43 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DWH Anon Agency</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      font-family: 'Courier New', Courier, monospace;
-      color: #00ff00;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #111;
-      border-bottom: 2px solid lime;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: #00ff00;
-      text-decoration: none;
-      padding: 14px 20px;
-      font-weight: bold;
-      position: relative;
-    }
-    nav a::before,
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, red, yellow, lime, cyan, magenta);
-      top: 0;
-      left: 0;
-      animation: moveLine 3s linear infinite;
-    }
-    nav a::after {
-      top: auto;
-      bottom: 0;
-    }
-    @keyframes moveLine {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-    .container {
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .headline {
-      font-size: 2.5rem;
-      text-shadow: 0 0 15px lime;
-    }
-    .plan-section {
-      margin-top: 100px;
-      padding: 50px;
-      background: rgba(0,255,0,0.05);
-      border: 1px solid lime;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .plan-section h2 {
-      color: lime;
-      text-shadow: 0 0 10px lime;
-    }
-    .plan-section p {
-      color: white;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DWH Anon Network</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
+
+  <!-- 🔥 Rainbow Navbar -->
+  <div class="navbar rainbow-border">
     <a href="index.html">🏠 Home</a>
-    <a href="agency.html">👥 Agency Rodmap</a>
-    <a href="card.html">📇 Card Profile</a>
-    <a href="plan.html">📌 Agency Future Plan</a>
+    <a href="roadmap.html">👥 Agency Roadmap</a>
+    <a href="card.html">💻 Card Profile</a>
+    <a href="future.html">📌 Agency Future Plan</a>
     <a href="contact.html">📞 Contact</a>
-  </nav>  <div class="container">
-    <h1 class="headline">Welcome to DWH Anon Network</h1>
-    <p>Initializing secure session...</p>
-    <p>Accessing mainframe...</p>
-    <p style="color: red;">[Status: 🔒 LOCKED]</p>
-    <p>Coming Soon...</p>
-  </div>  <div class="plan-section">
-    <h2>📌 Agency Future Plan</h2>
-    <p>We are building an internationally recognized cyber-intelligence & creative innovation team, driven by DWH ethics, technology, and automation. Our roadmap will include launching public tools, internal frameworks, social initiatives, and global partnerships to empower secure digital transformation.</p>
   </div>
+
+  <!-- 🧠 Welcome Section -->
+  <section class="hero">
+    <h1><span class="glow">Welcome</span> to <span class="glow">DWH</span> <span class="glow">Anon Network</span></h1>
+    <p class="green-text">Initializing secure session...</p>
+    <p class="green-text">Accessing mainframe...</p>
+    <p class="red-text">[Status: 🔒 LOCKED]</p>
+    <p class="green-text">Coming Soon...</p>
+  </section>
+
+  <!-- 🚀 Future Plan -->
+  <section class="box">
+    <h2>📌 <span class="glow">Agency Future Plan</span></h2>
+    <p>
+      We are building an <br>
+      internationally recognized <br>
+      cyber-intelligence & creative <br>
+      research agency. Our mission is to <br>
+      dominate digital defense, innovation <br>
+      and ethical hacking globally.
+    </p>
+  </section>
+
 </body>
 </html>
