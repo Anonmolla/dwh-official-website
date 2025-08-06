@@ -1,81 +1,28 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>💀 DWH Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DWH Anon Agency</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background-color: black;
-      color: #00ff00;
-      font-family: 'Courier New', monospace;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar-toggle {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 1001;
-    }
-    .navbar-menu {
-      position: absolute;
-      top: 50px;
-      left: 15px;
-      background-color: #111;
-      border: 1px solid #00ff00;
-      padding: 10px;
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      border-radius: 5px;
-      z-index: 1000;
-    }
-    .navbar-menu a {
-      color: #00ff00;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .navbar-menu a:hover {
-      text-decoration: underline;
-    }
-    .terminal {
-      text-align: center;
-      margin-top: 100px;
-    }
-    .cursor::after {
-      content: "|";
-      animation: blink 1s step-start infinite;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-    .green { color: #00ff00; }
-    .orange { color: #ff8800; }
-    .orange.blink {
-      animation: blink 1s infinite;
-    }
-    .white { color: #fff; }
-  </style>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('navbar-menu');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-    }
-  </script>
 </head>
-<body>  <!-- ☰ Hamburger Icon -->  <div class="navbar-toggle" onclick="toggleMenu()">☰</div>  <!-- 🔰 Hidden Navbar Menu -->  <div id="navbar-menu" class="navbar-menu">
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
     <a href="index.html">🏠 Home</a>
     <a href="about.html">🔍 About</a>
-    <a href="#">📞 Contact</a>
-    <a href="#">💼 Projects</a>
-  </div>  <!-- ⚙️ Terminal Section -->  <div class="terminal">
-    <h1><span class="cursor"></span> 💀</h1>
-    <p class="green">Discipline With Hustle</p>
-    <p class="orange">Initializing hacking environment...</p>
-    <p class="white">Status: <span class="green">ONLINE</span></p>
-    <p class="orange blink">>>> Awaiting next command...</p>
-  </div></body>
+    <a href="contact.html">📞 Contact</a>
+    <a href="projects.html">💼 Projects</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1><span class="emoji">💀</span> Discipline<br>With Hustle</h1>
+    <p>Initializing<br><span class="orange">hacking environment...</span><br>
+    Status: <span class="green">ONLINE</span><br><br>
+    >>> <span class="orange">Awaiting<br>next<br>command...</span></p>
+  </div>
+
+</body>
 </html>
