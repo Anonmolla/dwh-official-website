@@ -1,46 +1,41 @@
-body {
-  background-color: black;
-  color: #00ff00;
-  font-family: "Courier New", monospace;
+/* Navbar Styling */
+.navbar {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  gap: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #0f0;
+  background-color: #000;
+  flex-wrap: wrap;
 }
 
-.terminal {
+.navbar a {
+  color: #0f0;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #0f0;
+}
+
+/* Hero section */
+.hero {
   text-align: center;
+  margin-top: 80px;
 }
 
 .green {
-  color: #00ff00;
+  color: #0f0;
 }
 
 .orange {
-  color: orange;
+  color: #f90;
 }
 
-.white {
-  color: white;
-}
-
-.blink {
-  animation: blink 1s infinite;
-}
-
-.cursor {
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-p {
-  margin: 5px 0;
+.emoji {
+  font-size: 32px;
 }
